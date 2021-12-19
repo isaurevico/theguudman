@@ -1,0 +1,10 @@
+:root {
+    --jaune-guudman: #EFAF00;
+}
+
+body {
+    /* background: #000000; */
+    font-family: "Montserrat", sans-serif;
+}
+
+@import url('file:///C:\Users\louis\Desktop\theguudman\css\menu.css');
