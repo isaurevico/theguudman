@@ -10,12 +10,18 @@
 
 #titreHaut {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-shadow: 0.6em 0.3em 0.1em rgb(0 0 0 / 40%); /*ombre du titre */
     display: inline-block;
     color: mediumpurple;
-    font-size: 1.5em;
+    font-size: 1em;
     padding: 1%;
 }
+
+#titreHaut span {
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+
 
 /*création des variables de couleurs, pour pouvoir les réutiliser*/
 :root {
@@ -25,6 +31,7 @@
 
 /* phrase d'accueil dans la page d'accueil*/
 div #texte p{ 
+    padding-right: 1em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: italic;
     color: black;
@@ -33,13 +40,6 @@ div #texte p{
     display: inline-block;
 }
 
-#bg {
-    background-image: url(background.png);
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
 
 #shirt{
     -webkit-filter: blur(3px);
@@ -55,7 +55,6 @@ div #texte p{
 
 #body {
     display: block;
-    background-color: white;
     margin: 0% 5% 0% 5%;
 }
 
@@ -103,42 +102,61 @@ div #texte p{
 }
 
 
-#noir p {
+#noir img.images {
+    vertical-align: top;
     display: inline-block;
-    color: blue;
-    font-size: 1em;
-    
+    padding: 1%;
+    width: auto;
 }
- 
+
 
 #blanc {
-    display:block;
+    display: block;
     background-color: white;
     padding: 1%;
     width: auto;
-
+    margin: auto;
 }
 
-/*
+
 .row {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
+    align-items: stretch;
+    margin: auto;
+    width: auto;
 }
 
-Create two equal columns that sits next to each other
+/* Create four equal columns that sits next to each other */
 .column {
-    flex: 50%;
+    flex: 32%;
+    max-width: 32%;
     padding: 0 4px;
 }
 
-    .column img {
-        margin-top: 8px;
-        vertical-align: middle;
-        height: fit-content;
-        width: fit-content
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
     }
-*/
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
 #faq p {
     color: var(--gris-guudman);
     transition: all 1.5s ease-in-out;
@@ -170,17 +188,4 @@ a {
     
 }
 
-/* Titre des images
-.contenant {
-    position: relative;
-    text-align: center;
-    color: green;   
-}
 
-.texte_centrer {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-*/
